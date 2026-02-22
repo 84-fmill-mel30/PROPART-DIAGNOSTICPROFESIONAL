@@ -20,6 +20,23 @@ import java.util.List;
  */
 public class MainActivityExample extends AppCompatActivity {
     
+   <uses-permission android:name="android.permission.BLUETOOTH" />
+<uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+<uses-permission android:name="android.permission.BLUETOOTH_CONNECT" /> ```
+
+### 2. El Código de Bluetooth (MainActivity.java)
+Si el código que te dio empieza con algo como `public class ...`, va en un archivo `.java`.
+* **Ojo de tiburón:** En Java, el nombre del archivo tiene que ser **idéntico** al nombre de la clase. Si Claude le puso `BluetoothHelper`, tu archivo se tiene que llamar `BluetoothHelper.java`.
+
+Si es solo un fragmento para activar el Bluetooth, pégalo dentro del método `onCreate`:
+
+```java
+// Ejemplo de código Java que te pudo dar para el Bluetooth
+BluetoothAdapter bluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
+if (bluetoothAdapter == null) {
+    // El dispositivo no tiene Bluetooth (como un carro sin batería)
+} 
     private BluetoothPermissionHelper permissionHelper;
     private TechnicalDatabaseHelper dbHelper;
     
